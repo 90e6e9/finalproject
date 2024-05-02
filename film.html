@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="node_modules/image-compare-viewer/dist/image-compare-viewer.min.css">
+        <script src="node_modules/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
+        <script type="module" src="app.js"></script>
+    </head>
+    <body class="film">
+       
+        <div class="header">
+            <h1><a href="index.html">Anna Yoshinari</a></h1>
+            <ul>
+                <li class="active"><a href="film.html">Film</a></li>
+                <li><a href="cg.html">CG</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="index.html">Home</a>
+        <a href="cg.html">CG</a>
+        <a href="about.html">About</a>
+    </div>
+  
+  </div>
+  
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <span class="navbutton" onclick="openNav()"><img width="50px" height="50px" src="media/Hamburger_icon.svg.png" alt=""></span>
+
+  <script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+
+        <div class="container">
+        <div class="contentbox" id="cbox01">
+      
+        </div>
+
+        <div class="contentbox" id="cbox02">
+            <div class="grid" id="grid01">
+                <div class="imagery">
+                    <div class="slideshow-container">
+                        <img class="slides" src="media/img01.jpg" style="width:100%">
+                        <img class="slides" src="media/img02.png" style="width:100%">
+                        <img class="slides" src="media/img03.png" style="width:100%">
+                        <img class="slides" src="media/img04.png" style="width:100%">
+                        <img class="slides" src="media/img05.png" style="width:100%">
+                        <img class="slides" src="media/img06.png" style="width:100%">
+                        <img class="slides" src="media/img07.png" style="width:100%">
+                        <img class="slides" src="media/img08.png" style="width:100%">
+                      
+                        <button class="slideshow-button-left" onclick="plusDivs(-1)">&#10094;</button>
+                        <button class="slideshow-button-right" onclick="plusDivs(1)">&#10095;</button>
+                      </div>
+                      
+                      <script>
+                      var slideIndex = 1;
+                      showDivs(slideIndex);
+                      
+                      function plusDivs(n) {
+                        showDivs(slideIndex += n);
+                      }
+                      
+                      function showDivs(n) {
+                        var i;
+                        var x = document.getElementsByClassName("slides");
+                        if (n > x.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = x.length}
+                        for (i = 0; i < x.length; i++) {
+                          x[i].style.display = "none";  
+                        }
+                        x[slideIndex-1].style.display = "block";  
+                      }
+                      </script>
+                </div>
+                <div class="description">
+                    <h3>concept</h3>
+                    <p>The theme of this film is "obsession". The story is about the protagonist, who has never been given love, who is rescued by a woman and searches for love.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contentbox" id="cbox03">
+            <div class="grid" id="grid02">
+                <div class="description">
+                    <h3>look development</h3>
+                    <p>
+                        In order to give the screen a softer impression, I used a filter to make the pencil handwriting visible after rendering.
+                        I also tried to make the lines change slightly in each frame to express the instability of the story.</p>
+                </div>
+            <div id="image-compare" class="imagery">
+                <img src="media/cgbefore.PNG" alt="" />
+                <img src="media/cgafter.PNG" alt="" />
+            </div>
+        </div>
+        </div>
+
+        <div class="contentbox" id="cbox4">
+            <div class="grid" id="grid03">
+                <div class="imagery">
+                    <img class="mdscsh" width="100%" src="media/img09.png" alt=""> <br>
+                    <img class="mdfinal" width="100%" src="media/img10.png" alt="">
+                </div>
+                <div class="description">
+                    <h3>cloth simulation</h3>
+                    <p>First, I imported the character model as a cloth, untied the connected edges, and ran the simulation. The death of a character shot by a gun is indirectly and shockingly depicted through the way the cloth separates and falls.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contentbox" id="cbox5">
+            <iframe id="filmiframe" src="https://www.youtube.com/embed/Svaiig2v2LA?si=rOdUA3ht7uE5dzHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="cg">
+        <div class="header">
+            <h1><a href="index.html">Anna Yoshinari</a></h1>
+            <ul>
+                <li><a href="film.html">Film</a></li>
+                <li class="active"><a href="cg.html">CG</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+
+    <!-- The overlay -->
+<div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="index.html">Home</a>
+        <a href="film.html">Film</a>
+        <a href="about.html">About</a>
+    </div>
+  
+  </div>
+  
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <span class="navbutton" onclick="openNav()"><img width="50px" height="50px" src="media/Hamburger_icon.svg.png" alt=""></span>
+
+  <script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+
+        <div class="flex-container-cg">
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/cggif04.gif"></div>
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/cggif05.gif"></div>
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/cggif08.gif"></div>
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/cggif09.gif"></div>
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/cggif10.gif"></div>
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/cggif11.gif"></div>
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/cggif07.gif"></div>
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/cggif01.gif"></div>
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/cggif02.gif"></div>
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/cggif06.gif"></div>
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/kitchenshade.png"></div>
+            <div style="flex-grow: 1" class="galleryimg"><img src="media/kitchenshade2.png"></div>
+
+        </div>
+    </div>
+    </body>
+</html>

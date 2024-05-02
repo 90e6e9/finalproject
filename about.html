@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Anna Yoshinari Portfolio - About</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="aboutcontact">
+        <div class="header">
+            <h1><a href="index.html">Anna Yoshinari</a></h1>
+            <ul>
+                <li><a href="film.html">Film</a></li>
+                <li><a href="cg.html">CG</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+            </ul>
+        </div>
+
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="index.html">Home</a>
+        <a href="film.html">Film</a>
+        <a href="cg.html">CG</a>
+    </div>
+  
+  </div>
+  
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <span class="navbutton" onclick="openNav()"><img width="50px" height="50px" src="media/Hamburger_icon.svg.png" alt=""></span>
+
+  <script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+
+
+    <!--About Me-->
+    <div class="about">
+        <h3>About me</h3>
+        <img class="aboutillust" src="https://cdn.glitch.global/494b855c-b079-4b2d-92cc-a368c479cda1/Untitled_Artwork%20(13).png?v=1706772487822" width="400px" height="300px" alt="Illustration of a girl and a big plush">
+            <p>Hi! I am Anna Yoshinari, a third year student studying character animation at CalArts.</p>    
+            <p>I am passionate about exploring <strong>non-photorealistic CG</strong>. I made a full CG animated film in my second year and I am currently working on a new film using Blender and Maya. I also love working on <strong>visual development</strong>, and creating a unique, specific look that matches each projects.</p>
+            <p>In my free time, I like to <em>make clothes</em> and <em>do embroidery</em>. I also enjoy painting using traditional mediums such as watercolor and gouache.</p>
+            <p>email: <a href="mailto:annayoshinari@alum.calarts.edu">annayoshinari@alum.calarts.edu</a></p>
+            <p class="portbutton"><b><a href="https://annayoshinari.weebly.com/" target="_blank">Check out my portfolio!</a></b></p>
+    </div>
+
+    <!--Contact Me-->
+    <div class="contact">
+        <h3>Contact me</h3>
+        
+    
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+        <!-- Replace with your Access Key -->
+        <input type="hidden" name="access_key" value="6bb4f1cc-7157-46da-ae5f-73c4ac1a5d3a">
+    
+        <!-- Form Inputs. Each input must have a name="" attribute -->
+        <input class="nameForm" type="text" name="name" placeholder="Name" required>
+        <input class="emailForm" type="email" name="email" placeholder="Email" required><br>
+        <textarea class="messageForm" name="message" placeholder="Message" required></textarea>
+    
+        <!-- hCaptcha Spam Protection -->
+        <div class="h-captcha" data-captcha="true"></div>
+    
+        <button type="submit">Submit Form</button>
+    
+    </form>
+    <!-- Required for hCaptcha -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+ 
+</div>
+    </body>
+</html>

@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
+
+* {
+    margin: 0;
+}
+
+body.film {
+    background-color: rgb(66, 53, 53);
+ 
+}
+
+h1, h3 {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    font-size: 30px;
+    margin: 20px;
+    color: black;
+}
+
+p {
+    font-family: monospace;
+    font-size: 13px;
+    color: rgb(228, 223, 222);
+    margin: 20px;
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header h1 {
+    float: left;
+    margin: 10px 0px 0px 40px;
+}
+
+.header a {
+    color: black;
+    text-decoration: none;
+}
+
+.header ul {
+    list-style: none;
+
+    float: right;
+    margin-right: 10px;
+}
+
+.header li {
+    display: inline;
+    float: left;
+}
+
+.header li a {
+    display: block;
+    color: black;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    transition-duration: 0.2s;
+
+
+}
+.header li a:hover {
+    background-color: #fcfaf8;
+}
+
+.header li.active {
+    display: inline;
+    float: left;
+    background-color: #fcfaf8;
+}
+
+/* index.html */
+
+body.home {
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#videobg {
+
+        position: fixed;
+        right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+      
+}
+
+.intro {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    animation: fadeIn 2s;
+}
+
+.intro h1 {
+    color: black;
+}
+
+.intro ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.intro li {
+    margin: 5px 50px;
+    color: black;
+
+}
+
+.intro li a{
+    margin: 0;
+    display: block;
+    border: 1px solid white;
+    width: 100px;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    transition-duration: 0.5s;
+}
+
+.intro li a:hover {
+    background-color: white;
+  
+}
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+
+
+/* film.html */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.container h3{
+ color: white;
+}
+
+.contentbox {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+#cbox01 {
+    background-image: url(media/aviarycoverimg.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: center;
+    background-color: rgb(66, 53, 53);
+}
+
+#cbox01 button a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    font-size: 30px;
+    bottom: 50px;
+    right: 5%;
+    text-shadow: 1px 1px 2px black;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#cbox02, #cbox03 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#cbox03 {
+    background-color: rgb(116, 95, 95);
+}
+
+#cbox04 {
+    background-color: rgb(172, 144, 144);
+}
+
+.grid {
+    display: grid;
+    max-height: 90vh;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid01, #grid03{
+    grid-template-columns: 3fr 1fr;
+    height: 80vh;
+}
+
+#grid02 {
+    grid-template-columns: 1fr 3fr;
+    height: 80vh;
+}
+
+.slideshow-container {
+    position: relative;
+    
+}
+
+.slides {
+    display:none;
+    max-height: 80vh;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slideshow-button-left {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+.slideshow-button-right {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+#image-compare {
+    margin:  auto;
+}
+
+#image-compare img {
+    max-height: 80vh; 
+    max-width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#grid03 img.mdscsh {
+    max-height: 45vh; 
+    max-width: fit-content;
+}
+#grid03 img.mdfinal {
+    max-height: 40vh; 
+    max-width: fit-content;
+}
+
+#cbox5 {
+    background-color: rgb(22, 19, 19);
+}
+
+
+#cbox5 iframe {
+    margin-top: 60px;
+    height: 90%;
+    width: 90%;
+}
+
+
+/* cg.html */
+
+.cg {
+    width: 100%;
+}
+
+.flex-container-cg {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 80px 50px 0px 50px;
+    justify-content: center;
+}
+
+.flex-container-cg .galleryimg {
+    margin: 10px 10px 30px 10px;
+    text-align: center;
+    min-width: 400px;
+}
+
+.flex-container-cg .galleryimg img {
+    max-height: 200px;
+    width: fit-content;
+    
+  }
+
+/* about.html */
+
+body.aboutcontact {
+    margin-top: 80px;
+}
+
+body.aboutcontact p {
+    color: black;
+}
+
+body.aboutcontact h3 {
+    color: rgb(83, 7, 7);
+}
+
+.about {
+    margin: 20px;
+    background-color: rgb(248, 215, 223);
+    border-radius: 5px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+
+.about img {
+    float: left;
+    margin-left: 50px;
+}
+
+/* "Check out my portfolio!" button */
+
+.about p.portbutton {
+    margin-top: 50px;
+}
+
+.about p.portbutton a {
+    padding: 10px;
+    background-color: #fff;
+    color: rgb(83, 7, 7);
+    border: 2px dashed #fff;
+    text-decoration: none;
+}
+
+.about p.portbutton a:hover {
+    color: rgb(255, 163, 186);
+    background-color: rgb(255, 231, 237);
+    text-decoration: none;
+}
+
+/* Contact Me */
+
+.contact {
+    clear: left;
+    margin: 20px;
+    border: 2px dashed rgb(255, 163, 186);
+    padding: 10px;
+}
+
+.nameForm {
+    width: 100px;
+    padding: 10px;
+    margin: 0px 0px 10px 10px;
+}
+
+.emailForm {
+    width: 250px;
+    padding: 10px;
+    margin: 0px 0px 10px 10px;
+}
+
+.messageForm {
+    width: 400px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 0px 0px 10px 10px;
+}
+
+
+
+
+      /* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  .navbutton {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+  
+
+  
+
+@media only screen and (max-width: 480px) {
+
+    .header{
+        display: none;
+    }
+
+    .grid {
+        display: block;
+        padding: 0;
+    }
+    
+    .flex-container-cg {
+        padding: 120px 50px 0px 50px;
+    }
+
+    body.aboutcontact {
+        margin-top: 120px;
+    }
+
+    #cbox5 iframe {
+        margin-top: 120px;
+        height: 80%;
+        width: 90%;
+    }
+
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+
+    .navbutton{
+        display: block;
+    }
+    
+}
